@@ -11,6 +11,7 @@
   text-transform: uppercase;
   border-radius: 15px;
   border: 1px solid rgba(252, 249, 249, 0.10);
+  background: transparent;
 
   @include transition(border);
 
