@@ -1,0 +1,24 @@
+.products-list {
+  display: grid;
+  gap: 2.5rem 1.25rem;
+
+  @include media {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media(1280) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+
+  &__picture {
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 335 / 400;
+  }
+}

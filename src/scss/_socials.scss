@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  gap: .75rem;
+
+  &--item {
+    @include transition;
+
+    padding: .5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(252, 249, 249, 0.10);
+    background-color: rgba(252, 249, 249, 0.10);
+    transition-property: border, background-color;
+
+    @include event {
+      background-color: transparent;
+      border: 1px solid var(--base-yellow);
+    }
+
+    svg {
+      fill: var(--base-white);
+    }
+  }
+}

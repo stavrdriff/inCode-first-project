@@ -1,0 +1,78 @@
+.section {
+  $this: &;
+
+  position: relative;
+  padding-block: 2.5rem;
+
+  @include media {
+    padding-block: 3.125rem;
+  }
+
+  @include media(1280) {
+    padding-block: 4.6875rem;
+  }
+
+  @include media(1440) {
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+
+  &:last-child {
+      padding-bottom: 5rem;
+
+      @include media {
+        padding-bottom: 6.25rem;
+      }
+
+      @include media(1280) {
+        padding-bottom: 9.375rem;
+      }
+  }
+
+  &--title-center {
+    #{$this} {
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+
+  &--decor-bottom-right {
+    background-image: image-set(
+      url(../images/about-us-decor.webp) type("image/webp") 1x,
+      url(../images/about-us-decor-2x.webp) type("image/webp") 2x,
+      url(../images/about-us-decor.png) type("image/png") 1x,
+      url(../images/about-us-decor-2x.png) type("image/png") 2x
+    );
+    background-position: calc(100% + 209px) 100%;
+    background-repeat: no-repeat;
+    background-size: 459px 408px;
+
+    @include media {
+      background-position: calc(100% + 176px) 100%;
+      background-size: 545px 484px;
+    }
+
+    @include media(1280) {
+      background-position: calc(100% + 160px) 100%;
+    }
+
+    @include media(1440) {
+      background-position: 100% 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    &:not(:first-of-type) {
+      margin-top: 1.25rem;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

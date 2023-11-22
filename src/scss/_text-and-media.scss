@@ -1,0 +1,44 @@
+.text-and-media {
+  $this: &;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+
+  @include media(1280) {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3.125rem;
+  }
+
+  &__content {
+    flex-shrink: 1;
+  }
+
+  &__picture {
+    border-radius: .25rem;
+    overflow: hidden;
+  }
+
+  &--media-right {
+    #{$this} {
+      &__picture {
+        @include media(1280) {
+          flex-shrink: 0;
+          float: right;
+          max-width: 37.125rem;
+        }
+
+        @include media(1240) {
+          max-width: 44.3125rem;
+        }
+      }
+    }
+  }
+
+  &--media-left {
+    flex-direction: row-reverse;
+
+    
+  }
+}

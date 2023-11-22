@@ -1,0 +1,61 @@
+@mixin event {
+    &:focus,
+    &:hover {
+        @content;
+    }
+}
+
+@mixin eventAfter {
+    &:focus::after,
+    &:hover::after {
+        @content;
+    }
+}
+
+@mixin eventBefore {
+    &:focus::before,
+    &:hover::before {
+        @content;
+    }
+}
+
+@mixin transition(
+    $prop: all,
+    $duration: .25s,
+    $timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+    transition: $prop $duration $timing-function;
+}
+
+@mixin media($screen: 768) {
+    @media screen and (min-width: #{$screen}px) {
+        @content;
+    }
+}
+
+@mixin media-minmax($min: 768, $max: 1158) {
+    @media (min-width: #{$min}px) and (max-width: #{$max}px) {
+        @content;
+    }
+}
+
+@mixin is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@mixin font-face(
+    $name, $file, 
+    $weight: normal, 
+    $style: normal, 
+    $display: swap,
+    $format: 'woff2'
+) {
+    @font-face {
+        font-weight: $weight;
+        font-family: "#{$name}";
+        font-style: $style;
+        font-display: $display;
+        src: url('../fonts/#{$name}/#{$file}.#{$format}') format($format);
+    }
+}

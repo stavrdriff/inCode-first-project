@@ -1,8 +1,315 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./header.css');
+:root {
+  --base-black: #1C2225;
+  --base-yellow: #ECD979;
+  --base-white: #FCF9F9;
+  --primary-text-color: var(--base-white);
+  --secondary-text-color: var(--base-yellow);
+  --primary-font-family: "Manrope", sans-serif;
+  --body-background-color: var(--base-black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 1.5;
+  font-family: var(--primary-font-family);
+  color: var(--primary-text-color);
+  background-color: var(--body-background-color);
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+body.is-blocked {
+  overflow: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  --container-padding: 1.25rem;
+  --container-width: 23.4375rem;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  max-width: var(--container-width);
+}
+@media screen and (min-width: 768px) {
+  .container {
+    --container-padding: 2rem;
+    --container-width: 48rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    --container-padding: 6.25rem;
+    --container-width: 80rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    --container-width: 90rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.header {
+  margin-block: 1.25rem;
+}
+
+.button {
+  display: inline-flex;
+  padding-block: 0.875rem;
+  padding-inline: 2.25rem;
+  gap: 0.625rem;
+  color: var(--base-white, #FCF9F9);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border: 1px solid rgba(252, 249, 249, 0.1);
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:focus, .button:hover {
+  border: 1px solid var(--base-yellow, #ECD979);
+}
+.button svg {
+  fill: var(--base-yellow);
+}
+@media screen and (min-width: 768px) {
+  .button {
+    padding-inline: 2.4375rem;
+    font-size: 1rem;
+  }
+}
+.button--phone {
+  padding-inline: 1.75rem;
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: unset;
+}
+@media screen and (min-width: 768px) {
+  .button--phone {
+    font-size: 0.875rem;
+  }
+}
+
+.button {
+  display: inline-flex;
+  padding-block: 0.875rem;
+  padding-inline: 2.25rem;
+  gap: 0.625rem;
+  color: var(--base-white, #FCF9F9);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border: 1px solid rgba(252, 249, 249, 0.1);
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:focus, .button:hover {
+  border: 1px solid var(--base-yellow, #ECD979);
+}
+.button svg {
+  fill: var(--base-yellow);
+}
+@media screen and (min-width: 768px) {
+  .button {
+    padding-inline: 2.4375rem;
+    font-size: 1rem;
+  }
+}
+.button--phone {
+  padding-inline: 1.75rem;
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: unset;
+}
+@media screen and (min-width: 768px) {
+  .button--phone {
+    font-size: 0.875rem;
+  }
+}
+
+.section {
+  position: relative;
+  padding-block: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-block: 3.125rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-block: 4.6875rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+}
+.section:last-child {
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .section:last-child {
+    padding-bottom: 6.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section:last-child {
+    padding-bottom: 9.375rem;
+  }
+}
+.section--title-center .section__title {
+  text-align: center;
+}
+.section--decor-bottom-right {
+  background-image: image-set(url(../images/about-us-decor.webp) type("image/webp") 1x, url(../images/about-us-decor-2x.webp) type("image/webp") 2x, url(../images/about-us-decor.png) type("image/png") 1x, url(../images/about-us-decor-2x.png) type("image/png") 2x);
+  background-position: calc(100% + 209px) 100%;
+  background-repeat: no-repeat;
+  background-size: 459px 408px;
+}
+@media screen and (min-width: 768px) {
+  .section--decor-bottom-right {
+    background-position: calc(100% + 176px) 100%;
+    background-size: 545px 484px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section--decor-bottom-right {
+    background-position: calc(100% + 160px) 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section--decor-bottom-right {
+    background-position: 100% 100%;
+  }
+}
+.section__title {
+  margin-bottom: 2.5rem;
+}
+.section__text:not(:first-of-type) {
+  margin-top: 1.25rem;
+}
+.section__text:not(:last-of-type) {
+  margin-bottom: 1.25rem;
+}
+
+.text-and-media {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .text-and-media {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3.125rem;
+  }
+}
+.text-and-media__content {
+  flex-shrink: 1;
+}
+.text-and-media__picture {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 1280px) {
+  .text-and-media--media-right .text-and-media__picture {
+    flex-shrink: 0;
+    float: right;
+    max-width: 37.125rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .text-and-media--media-right .text-and-media__picture {
+    max-width: 44.3125rem;
+  }
+}
+.text-and-media--media-left {
+  flex-direction: row-reverse;
+}
+
+.products-list {
+  display: grid;
+  gap: 2.5rem 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .products-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+.product__picture {
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 335/400;
+}/*# sourceMappingURL=styles.css.map */
