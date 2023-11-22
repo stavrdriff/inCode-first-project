@@ -39,10 +39,10 @@
 
   &--decor-bottom-right {
     background-image: image-set(
-      url(../images/about-us-decor.webp) type("image/webp") 1x,
-      url(../images/about-us-decor-2x.webp) type("image/webp") 2x,
-      url(../images/about-us-decor.png) type("image/png") 1x,
-      url(../images/about-us-decor-2x.png) type("image/png") 2x
+      url(../img/about-us-decor.webp) type("image/webp") 1x,
+      url(../img/about-us-decor-2x.webp) type("image/webp") 2x,
+      url(../img/about-us-decor.png) type("image/png") 1x,
+      url(../img/about-us-decor-2x.png) type("image/png") 2x
     );
     background-position: calc(100% + 209px) 100%;
     background-repeat: no-repeat;
@@ -62,8 +62,52 @@
     }
   }
 
+  &--decor-top-left {
+    background-image: image-set(
+      url(../img/collection-decor.webp) type("image/webp") 1x,
+      url(../img/collection-decor-2x.webp) type("image/webp") 2x,
+      url(../img/collection-decor.png) type("image/png") 1x,
+      url(../img/collection-decor-2x.png) type("image/png") 2x
+    );
+    background-position: 0 316px;
+    background-repeat: no-repeat;
+    background-size: 72px 177px;
+
+    @include media {
+      background-position: 0 271px;
+      background-size: 114px 300px;
+    }
+
+    @include media(1280) {
+      background-position: 0 291px;
+      background-size: 169px 300px;
+    }
+
+    @include media(1440) {
+      background-position: 0 301px;
+    }
+  }
+
   &__title {
     margin-bottom: 2.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.37;
+    letter-spacing: -.03em;
+
+    @include media {
+      font-size: 2.75rem;
+      line-height: 1.45;
+    }
+
+    @include media {
+      font-size: 2.75rem;
+      line-height: 1.45;
+    }
+  }
+
+  &__title-span {
+    color: var(--secondary-text-color);
   }
 
   &__text {

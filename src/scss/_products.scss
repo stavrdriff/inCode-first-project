@@ -20,5 +20,58 @@
     border-radius: 4px;
     overflow: hidden;
     aspect-ratio: 335 / 400;
+
+    @include media {
+      aspect-ratio: 342 / 430;
+    }
+
+    @include media(1280) {
+      aspect-ratio: 347 / 430;
+    }
+
+    @include media(1440) {
+      aspect-ratio: 400 / 430;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @include media {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__price {
+    color: rgba(252, 249, 249, 0.40);
+    font-size: .875rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+
+    @include media {
+      font-size: 1.125rem;
+    }
   }
 }
