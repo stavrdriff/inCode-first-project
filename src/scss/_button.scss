@@ -1,26 +1,33 @@
 .button {
+  --border-width: 1px;
+  --border-color: rgba(252, 249, 249, 0.10);
+
   display: inline-flex;
-  padding-block: .875rem;
-  padding-inline: 2.25rem;
+  align-items: center;
+  padding-block: calc(.875rem - var(--border-width));
+  padding-inline: calc(2.25rem - var(--border-width));
   gap: .625rem;
   color: var(--base-white, #FCF9F9);
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.5;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   border-radius: 15px;
-  border: 1px solid rgba(252, 249, 249, 0.10);
+  border: var(--border-width) solid var(--border-color);
   background: transparent;
 
   @include transition(border);
 
   @include event {
-    border: 1px solid var(--base-yellow, #ECD979);
+    --border-color: var(--base-yellow, #ECD979);
   }
 
-  svg {
-    fill: var(--base-yellow);
+  &__icon {
+    line-height: 0;
+
+    svg {
+      fill: var(--base-yellow);
+    }
   }
 
   @include media {
@@ -29,7 +36,7 @@
   }
 
   &--phone {
-    padding-inline: 1.75rem;
+    padding-inline: calc(1.75rem - var(--border-width));
     font-weight: 400;
     line-height: 1.42;
     letter-spacing: unset;

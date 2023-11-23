@@ -138,25 +138,30 @@ ul {
 }
 
 .button {
+  --border-width: 1px;
+  --border-color: rgba(252, 249, 249, 0.10);
   display: inline-flex;
-  padding-block: 0.875rem;
-  padding-inline: 2.25rem;
+  align-items: center;
+  padding-block: calc(0.875rem - var(--border-width));
+  padding-inline: calc(2.25rem - var(--border-width));
   gap: 0.625rem;
   color: var(--base-white, #FCF9F9);
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.5;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   border-radius: 15px;
-  border: 1px solid rgba(252, 249, 249, 0.1);
+  border: var(--border-width) solid var(--border-color);
   background: transparent;
   transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:focus, .button:hover {
-  border: 1px solid var(--base-yellow, #ECD979);
+  --border-color: var(--base-yellow, #ECD979);
 }
-.button svg {
+.button__icon {
+  line-height: 0;
+}
+.button__icon svg {
   fill: var(--base-yellow);
 }
 @media screen and (min-width: 768px) {
@@ -166,7 +171,7 @@ ul {
   }
 }
 .button--phone {
-  padding-inline: 1.75rem;
+  padding-inline: calc(1.75rem - var(--border-width));
   font-weight: 400;
   line-height: 1.42;
   letter-spacing: unset;
