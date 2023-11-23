@@ -25,7 +25,6 @@
       &__picture {
         @include media(1280) {
           flex-shrink: 0;
-          float: right;
           max-width: 37.125rem;
         }
 
@@ -39,6 +38,17 @@
   &--media-left {
     flex-direction: row-reverse;
 
-    
+    #{$this} {
+      &__picture {
+        @include media(1280) {
+          // flex-shrink: 0;
+          // max-width: 37.125rem;
+        }
+
+        @include media(1240) {
+          // max-width: 44.3125rem;
+        }
+      }
+    }
   }
 }
