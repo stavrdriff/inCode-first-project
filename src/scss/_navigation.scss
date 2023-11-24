@@ -1,0 +1,27 @@
+.navigation {
+  $this: &;
+
+  &--grid {
+    #{$this} {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include media {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    align-items: flex-end;
+  }
+
+  &__item {}
+
+  &__link {}
+}
