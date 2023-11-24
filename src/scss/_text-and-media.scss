@@ -15,6 +15,14 @@
     flex-shrink: 1;
   }
 
+  &__title {
+    @extend .section__title;
+  }
+
+  &__text {
+    @extend .section__text;
+  }
+
   &__picture {
     border-radius: .25rem;
     overflow: hidden;

@@ -215,7 +215,7 @@ ul {
     padding-bottom: 9.375rem;
   }
 }
-.section--title-center .section__title {
+.section--title-center .section__title, .section--title-center .text-and-media__title {
   text-align: center;
 }
 .section--decor-bottom-right {
@@ -263,7 +263,7 @@ ul {
     background-position: 0 301px;
   }
 }
-.section__title {
+.section__title, .text-and-media__title {
   margin-bottom: 2.5rem;
   font-size: 2rem;
   font-weight: 500;
@@ -271,13 +271,13 @@ ul {
   letter-spacing: -0.03em;
 }
 @media screen and (min-width: 768px) {
-  .section__title {
+  .section__title, .text-and-media__title {
     font-size: 2.75rem;
     line-height: 1.45;
   }
 }
 @media screen and (min-width: 768px) {
-  .section__title {
+  .section__title, .text-and-media__title {
     font-size: 2.75rem;
     line-height: 1.45;
   }
@@ -285,10 +285,10 @@ ul {
 .section__title-span {
   color: var(--secondary-text-color);
 }
-.section__text:not(:first-of-type) {
+.section__text:not(:first-of-type), .text-and-media__text:not(:first-of-type) {
   margin-top: 1.25rem;
 }
-.section__text:not(:last-of-type) {
+.section__text:not(:last-of-type), .text-and-media__text:not(:last-of-type) {
   margin-bottom: 1.25rem;
 }
 
