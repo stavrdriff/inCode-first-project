@@ -18,10 +18,20 @@
     display: flex;
     flex-direction: column;
     gap: 1.5625rem;
-    align-items: flex-end;
+    align-items: flex-end;    
   }
 
-  &__item {}
+  &__item {
+    
+  }
 
-  &__link {}
+  &__link {    
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 128.5%;      
+      text-transform: uppercase;
+      color: var(--white, #FCF9F9);
+  }
 }

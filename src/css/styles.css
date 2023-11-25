@@ -430,4 +430,13 @@ ul {
   flex-direction: column;
   gap: 1.5625rem;
   align-items: flex-end;
+}
+.navigation__link {
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.5%;
+  text-transform: uppercase;
+  color: var(--white, #FCF9F9);
 }/*# sourceMappingURL=styles.css.map */
