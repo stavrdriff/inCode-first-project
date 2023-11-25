@@ -1,0 +1,20 @@
+{
+  "liveSassCompile.settings.formats": [
+      {
+        // compress the css file
+        // "expanded" for not compressed css
+        // "compressed" for minimize css
+        "format": "expanded",
+        // add .min.css as the extension
+        // ".css" for not compressed css files
+        // ".min.css" for compressed css files
+        "extensionName": ".css",
+        // define the output/save path
+        "savePath": "./src/css/"
+      }
+    ],
+    "liveSassCompile.settings.excludeList": [
+      "/_styles/!screen.sass",
+      "**/node_modules/**"
+    ],
+}
