@@ -1,3 +1,10 @@
 .header {
   margin-block: 1.25rem;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    fill: var(--base-yellow);
+  } 
+
 }
