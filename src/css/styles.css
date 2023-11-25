@@ -440,11 +440,8 @@ ul {
   text-transform: uppercase;
   color: var(--white, #FCF9F9);
 }
-.navigation__span {
+.navigation__button {
   display: flex;
-  flex-direction: column;
-  gap: 1.5625rem;
-  align-items: flex-end;
 }
 .navigation__line {
   color: var(--base-yellow);

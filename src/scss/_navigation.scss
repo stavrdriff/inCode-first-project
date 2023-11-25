@@ -35,11 +35,9 @@
       color: var(--white, #FCF9F9);
   }
 
-  &__span {
+  &__button {
     display: flex;
-    flex-direction: column;
-    gap: 1.5625rem;
-    align-items: flex-end;
+    
   }
 
   &__line {
