@@ -439,4 +439,13 @@ ul {
   line-height: 128.5%;
   text-transform: uppercase;
   color: var(--white, #FCF9F9);
+}
+.navigation__span {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+  align-items: flex-end;
+}
+.navigation__line {
+  color: var(--base-yellow);
 }/*# sourceMappingURL=styles.css.map */
