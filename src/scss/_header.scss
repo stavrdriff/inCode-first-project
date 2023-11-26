@@ -5,6 +5,15 @@
     display: flex;
     align-items: center;
     fill: var(--base-yellow);
-  } 
+  }
+
+  &__button {
+    display: flex; 
+  }
+  
+  &__line {
+    color: var(--base-yellow);
+
+  }
 
 }

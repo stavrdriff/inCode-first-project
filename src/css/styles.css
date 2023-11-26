@@ -117,6 +117,12 @@ ul {
   align-items: center;
   fill: var(--base-yellow);
 }
+.header__button {
+  display: flex;
+}
+.header__line {
+  color: var(--base-yellow);
+}
 
 .socials {
   display: flex;
@@ -439,10 +445,4 @@ ul {
   line-height: 128.5%;
   text-transform: uppercase;
   color: var(--white, #FCF9F9);
-}
-.navigation__button {
-  display: flex;
-}
-.navigation__line {
-  color: var(--base-yellow);
 }/*# sourceMappingURL=styles.css.map */
