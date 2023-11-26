@@ -37,8 +37,6 @@
             gap: 5rem;
             padding-right: 12.125rem;
             padding-bottom: 2.5rem;
-
-
         }
 
         @include media(1280) {
@@ -53,36 +51,24 @@
 
     &__text{
         color: #FCF9F9;
-        font-size: 44px;
-        line-height: 54px; /* 122.727% */
-        letter-spacing: -1.32px;
+        font-size: 2.75rem;
+        line-height: 1.22;
+        letter-spacing: -0.03em;
 
         @include media {
             color: #FCF9F9;
-            font-size: 54px; 
-            line-height: 64px; /* 118.519% */
-            letter-spacing: -1.62px;
+            font-size: 3.375rem; 
+            line-height: 1.18;
         }
 
         @include media(1280) {
             color: #FCF9F9;
-            font-size: 64px;
-            line-height: 74px; /* 115.625% */
-            letter-spacing: -1.92px;
+            font-size: 4rem;
+            line-height: 1.15; 
         }
-
-        @include media(1440) {
-            color: #FCF9F9;
-            font-size: 64px;
-            line-height: 74px; /* 115.625% */
-            letter-spacing: -1.92px;
-        }
-
     }
 
     &__text-span{
         color: #ECD979;
     }
-
-
 }
