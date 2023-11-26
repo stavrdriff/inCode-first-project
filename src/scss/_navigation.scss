@@ -50,6 +50,11 @@
   .navigation {
     &__item {
       width: calc((100% - var(--gap-navigation)) / 2);
+      font-size: 0.875rem;
+
+      @include media {
+        width: unset;
+      }
     }
   }
 }
