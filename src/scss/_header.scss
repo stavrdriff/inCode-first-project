@@ -1,19 +1,44 @@
 .header {
   margin-block: 1.25rem;
 
-  &__logo {
+  &__content {
     display: flex;
     align-items: center;
-    fill: var(--base-yellow);
+    justify-content: space-between;    
+    gap: 1.25rem;    
   }
 
-  &__button {
-    display: flex; 
+  &__logo-wrapper {
+    padding-right: 2.5rem;
   }
-  
-  &__line {
-    color: var(--base-yellow);
 
+  &__mobile-wrapper {
+    display: none;
+
+    @include media(1280) {
+      display: flex;    
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__socials {
+    margin-inline: auto 0;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media(1280) {
+      display: none;
+    }
   }
 
 }

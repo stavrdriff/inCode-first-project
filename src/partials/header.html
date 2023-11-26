@@ -1,28 +1,29 @@
 <header class="header">
-  <div class="logotype__header">
-    <a class="header__link" href="" target="_blank">
-      <svg class="header__logo" width="44" height="39">
-        <use href="./img/logo-header-svg.svg"></use>
-      </svg>
+  <div class="container">
+    <div class="header__content">
+      <div class="header__logo-wrapper">
+    <a class="header__link" href="" target="_blank">      
+        <img class="header-logo" src="./img/logo-header-svg.svg" width="44" height="39" alt="logo" />      
     </a>
-  </div>
-  <nav class="navigation__list">
-    <ul class="navigation__item">
-      <li class="navigation__link">About us</li>
-      <li class="navigation__link">Our collection</li>
-      <li class="navigation__link">Customer Order</li>
-      <li class="navigation__link">Testimonials</li>
-    </ul>
-  </nav>
-  <a class="button button--phone" href="tel:+380684439426">+380 (68) 443-94-26</a>
-  
-  <load src="partials/socials/socials.html" />
-
-  <div class="berger__span">
-    <button class="burger__button" type="button">
-      <span class="span__line" width="37" height="3"></span>
-      <span class="span__line-short" width="27" height="3"></span>
-      <span class="span__line" width="37" height="3"></span> 
-    </button>    
-  </div> 
+      </div>
+      <div class="header__mobile-wrapper">
+    <div class="header__navigation">
+      <load src="partials/navigation/navigation.html" />
+    </div>
+    <div class="header__links">
+      <a class="button button--phone" href="tel:+380684439426">+380 (68) 443-94-26</a>
+    </div>
+      </div>  
+      <div class="header__socials">
+    <load src="partials/socials/socials.html" />
+      </div> 
+      <div class="header__actions">
+        <button class="burger" type="button">
+          <span class="burger__span"></span>
+          <span class="burger__span"></span>
+          <span class="burger__span"></span> 
+        </button>    
+      </div>
+    </div>
+  </div>  
 </header>
