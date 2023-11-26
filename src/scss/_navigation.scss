@@ -19,9 +19,22 @@
     flex-direction: column;
     gap: 1.5625rem;
     align-items: flex-end;
+    
+    @include media(1280) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
-  &__item {}
+  &__item {
+    
+  }
 
-  &__link {}
+  &__link {       
+    font-size: 14px;     
+    line-height: 1.28;      
+    text-transform: uppercase;
+    color: var(--base-white, #FCF9F9);
+  } 
+
 }
