@@ -1,5 +1,9 @@
-.header {
-  margin-block: 1.25rem;
+.header {  
+  padding-block: 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(180deg, var(--base-black) 83%, transparent 30%);
 
   &__content {
     display: flex;
