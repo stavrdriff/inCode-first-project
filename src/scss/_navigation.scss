@@ -1,6 +1,8 @@
 .navigation {
   $this: &;
 
+  --gap-navigation: 1.5625rem;
+
   &--grid {
     #{$this} {
       &__list {
@@ -16,12 +18,38 @@
 
   &__list {
     display: flex;
-    flex-direction: column;
-    gap: 1.5625rem;
+    flex-wrap: wrap;
+    gap: var(--gap-navigation);
     align-items: flex-end;
+
+    @include media(1280) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
-  &__item {}
+  &__item {
 
-  &__link {}
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.28;
+    text-transform: uppercase;
+    color: var(--base-white, #FCF9F9);
+
+    @include transition(color);
+
+    @include event {
+      color: var(--base-yellow);
+    }
+  }
+}
+
+.footer {
+  .navigation {
+    &__item {
+      width: calc((100% - var(--gap-navigation)) / 2);
+    }
+  }
 }
