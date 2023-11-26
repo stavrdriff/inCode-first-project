@@ -18,7 +18,7 @@
   &__title {
     @extend .section__title;
   }
-  
+
   &__title-span {
     @extend .section__title-span;
   }
@@ -67,12 +67,15 @@
 
     #{$this} {
       &__picture {
+        display: none;
+
         @include media {
+          display: block;
           flex-shrink: 0;
           max-width: 39.875rem;
           align-self: flex-end;
         }
-        
+
         @include media(1280) {
           max-width: 32.75rem;
         }

@@ -414,8 +414,12 @@ ul {
     flex-direction: row-reverse;
   }
 }
+.text-and-media--media-left .text-and-media__picture {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .text-and-media--media-left .text-and-media__picture {
+    display: block;
     flex-shrink: 0;
     max-width: 39.875rem;
     align-self: flex-end;
@@ -541,6 +545,10 @@ ul {
   line-height: 1.28;
   text-transform: uppercase;
   color: var(--base-white, #FCF9F9);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__link:focus, .navigation__link:hover {
+  color: var(--base-yellow);
 }
 
 .footer .navigation__item {

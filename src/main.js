@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectors = {
     openSelector: 'is-open',
     bodyBlocked: 'is-blocked',
-    modal: 'modal',
-    modalTrigger: '[data-action="modalTrigger"]',
+    // modal: 'modal',
+    // modalTrigger: '[data-action="modalTrigger"]',
     interactiveElements: 'input, button, a, textarea, iframe, select',
     mobileMenu: 'js-mobile-menu',
     mobileMenuTrigger: '[data-action="mobileMenuTrigger"]',
   }
 
-  function initMobileMenu() {
+  const initMobileMenu = () => {
     const mobileMenu = document.querySelector(`.${selectors.mobileMenu}`);
     const triggerArr = [...document.querySelectorAll(selectors.mobileMenuTrigger)];
     const body = document.querySelector('body');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function initModalTriggers() {
+  const initModalTriggers = () => {
     const buttonsArr = [...document.querySelectorAll(selectors.modalTrigger)];
 
     if (!buttonsArr.length) {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function modalHandler(trigger, index, modalActiveSelector) {
+  const modalHandler = (trigger, index, modalActiveSelector) => {
     const modals = [...document.querySelectorAll(`.${selectors.modal}`)];
 
     if (!modals.length) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function initModals(modalActiveSelector, modalSelector) {
+  const initModals = (modalActiveSelector, modalSelector) => {
     const modals = [...document.querySelectorAll(`.${modalSelector}`)];
 
     if (!modals.length) {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function tabindexHandler(elements, modalActiveSelector, pageInteractiveElements) {
+  const tabindexHandler = (elements, modalActiveSelector, pageInteractiveElements) => {
     elements.forEach((element) => {
       if (!element.closest(`.${modalActiveSelector}`)) {
         element.setAttribute('tabindex', '-1');
@@ -104,6 +104,43 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+// ==================== smooth scroll start =========================== //
+
+  const scrollToTarget = (target) => {
+    const targetElement = document.getElementById(target);
+
+    if (!targetElement) return;
+
+    window.scrollTo({
+      left: 0,
+      behavior: 'smooth',
+      top: targetElement.offsetTop,
+    });
+  };
+
+  const initScrollAnchors = () => {
+    const links = [...document.querySelectorAll('[href*="#"]')];
+
+    if (!links.length) return;
+
+    links.forEach((link) => {
+      const target = link.getAttribute('href').split('#', [2]).slice(1);
+
+      if (!target.length) {
+        return;
+      }
+
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        scrollToTarget(target);
+      });
+    });
+  };
+
+  // ==================== smooth scroll end =========================== //
+
+
+  initScrollAnchors();
   initMobileMenu();
   initModalTriggers();
 });
