@@ -1,0 +1,45 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 31.75rem;
+    gap: 2.5rem;
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        border-radius: 0.9375rem;
+        border: 1px solid rgba(252, 249, 249, 0.1);
+        background-color: transparent ;
+        color: var(--base-white);
+
+        &::placeholder {
+            color: rgba(252, 249, 249, 0.5);
+        }
+    }
+
+    &__comments {
+        width: 100%;
+        min-height: 12.25rem;
+        padding: 0.875rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(252, 249, 249, 0.1);
+        background-color: transparent;
+        color: var(--base-white);
+        resize: none;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+
+        @include media {
+            justify-content: flex-start;
+        }
+    }
+}

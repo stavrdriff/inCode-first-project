@@ -1,13 +1,37 @@
 <header class="header">
-  <load src="partials/burger-menu.html" />
-  <button class="button">
-    <span class="button__text"> order </span>
-    <span class="button__icon">
-      <svg width="27" height="22">
-        <use href="./img/sprite.svg#arrow" />
-      </svg>
-    </span>
-  </button>
-
-  <load src="partials/socials/socials.html" />
+  <div class="container">
+    <div class="header__content">
+      <div class="header__logo-wrapper">
+        <a class="header__link" href="" target="_blank">
+          <img
+            class="header-logo"
+            src="./img/logo-header-svg.svg"
+            width="44"
+            height="39"
+            alt="logo"
+          />
+        </a>
+      </div>
+      <div class="header__mobile-wrapper js-mobile-menu">
+        <div class="header__navigation">
+          <load src="partials/navigation/navigation.html" />
+        </div>
+        <div class="header__links">
+          <a class="button button--phone" href="tel:+380684439426"
+            >+380 (68) 443-94-26</a
+          >
+        </div>
+      </div>
+      <div class="header__socials">
+        <load src="partials/socials/socials.html" />
+      </div>
+      <div class="header__actions">
+        <button class="burger" type="button" data-action="mobileMenuTrigger">
+          <span class="burger__span"></span>
+          <span class="burger__span"></span>
+          <span class="burger__span"></span>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
