@@ -103,8 +103,7 @@ ul {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -282,7 +281,6 @@ ul {
   text-align: center;
 }
 .section--decor-bottom-right {
-  background-image: -webkit-image-set(url(../img/about-us-decor.webp) type("image/webp") 1x, url(../img/about-us-decor-2x.webp) type("image/webp") 2x, url(../img/about-us-decor.png) type("image/png") 1x, url(../img/about-us-decor-2x.png) type("image/png") 2x);
   background-image: image-set(url(../img/about-us-decor.webp) type("image/webp") 1x, url(../img/about-us-decor-2x.webp) type("image/webp") 2x, url(../img/about-us-decor.png) type("image/png") 1x, url(../img/about-us-decor-2x.png) type("image/png") 2x);
   background-position: calc(100% + 209px) 100%;
   background-repeat: no-repeat;
@@ -305,7 +303,6 @@ ul {
   }
 }
 .section--decor-top-left {
-  background-image: -webkit-image-set(url(../img/collection-decor.webp) type("image/webp") 1x, url(../img/collection-decor-2x.webp) type("image/webp") 2x, url(../img/collection-decor.png) type("image/png") 1x, url(../img/collection-decor-2x.png) type("image/png") 2x);
   background-image: image-set(url(../img/collection-decor.webp) type("image/webp") 1x, url(../img/collection-decor-2x.webp) type("image/webp") 2x, url(../img/collection-decor.png) type("image/png") 1x, url(../img/collection-decor-2x.png) type("image/png") 2x);
   background-position: 0 316px;
   background-repeat: no-repeat;
@@ -330,7 +327,6 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .section--decor-bottom-left {
-    background-image: -webkit-image-set(url(../img/your-order-decor.webp) type("image/webp") 1x, url(../img/your-order-decor-2x.webp) type("image/webp") 2x, url(../img/your-order-decor.png) type("image/png") 1x, url(../img/your-order-decor-2x.png) type("image/png") 2x);
     background-image: image-set(url(../img/your-order-decor.webp) type("image/webp") 1x, url(../img/your-order-decor-2x.webp) type("image/webp") 2x, url(../img/your-order-decor.png) type("image/png") 1x, url(../img/your-order-decor-2x.png) type("image/png") 2x);
     background-position: -222px 100%;
     background-repeat: no-repeat;
@@ -385,8 +381,7 @@ ul {
   .text-and-media {
     flex-direction: row;
     align-items: center;
-    -moz-column-gap: 3.125rem;
-         column-gap: 3.125rem;
+    column-gap: 3.125rem;
   }
 }
 .text-and-media__content {
@@ -404,10 +399,8 @@ ul {
 .text-and-media__picture picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 @media screen and (min-width: 1280px) {
   .text-and-media--media-right .text-and-media__picture {
@@ -491,10 +484,8 @@ ul {
 .product__image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 .product__content {
   display: flex;
@@ -548,9 +539,6 @@ ul {
   border: 1px solid rgba(252, 249, 249, 0.1);
   background-color: transparent;
   color: var(--base-white);
-}
-.form__input::-moz-placeholder {
-  color: rgba(252, 249, 249, 0.5);
 }
 .form__input::placeholder {
   color: rgba(252, 249, 249, 0.5);
@@ -612,13 +600,18 @@ ul {
 
 .footer .navigation__item {
   width: calc((100% - var(--gap-navigation)) / 2);
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  .footer .navigation__item {
+    width: unset;
+  }
 }
 
 .footer {
   border-top: 1px solid rgba(252, 249, 249, 0.1);
 }
 .footer .container {
-  background-image: -webkit-image-set(url(../img/collection-decor.webp) type("image/webp") 1x, url(../img/collection-decor-2x.webp) type("image/webp") 2x, url(../img/collection-decor.png) type("image/png") 1x, url(../img/collection-decor-2x.png) type("image/png") 2x);
   background-image: image-set(url(../img/collection-decor.webp) type("image/webp") 1x, url(../img/collection-decor-2x.webp) type("image/webp") 2x, url(../img/collection-decor.png) type("image/png") 1x, url(../img/collection-decor-2x.png) type("image/png") 2x);
   background-position: -38px calc(100% + 189px);
   background-repeat: no-repeat;
@@ -650,7 +643,7 @@ ul {
 @media screen and (min-width: 768px) {
   .footer__content {
     gap: 5rem;
-    padding-right: 14.125rem;
+    padding-right: 12.125rem;
     padding-bottom: 2.5rem;
   }
 }

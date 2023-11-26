@@ -11,16 +11,16 @@
         background-position: -38px calc(100% + 189px);
         background-repeat: no-repeat;
         background-size: 451px 401px;
-    
+
         @include media {
             background-position: calc(100% + 278px) -14px;
         }
-    
+
         @include media(1280) {
             background-position:  calc(100% + 259px) -61px;
             background-size: 594px 528px;
         }
-    
+
         @include media(1440) {
             background-position: calc(100% + 99px) -61px;
         }
@@ -35,10 +35,10 @@
 
         @include media {
             gap: 5rem;
-            padding-right: 14.125rem;
+            padding-right: 12.125rem;
             padding-bottom: 2.5rem;
-            
-            
+
+
         }
 
         @include media(1280) {
