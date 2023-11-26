@@ -292,6 +292,7 @@ ul {
 .section {
   position: relative;
   padding-block: 2.5rem;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .section {
