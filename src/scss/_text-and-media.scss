@@ -78,6 +78,7 @@
 
         @include media(1280) {
           max-width: 32.75rem;
+          align-self: flex-start;
         }
 
         @include media(1440) {
