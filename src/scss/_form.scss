@@ -1,130 +1,45 @@
 .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 31.75rem;
+    gap: 2.5rem;
 
     &__fields {
         display: flex;
         flex-direction: column;
+        gap: 1.25rem;
     }
 
     &__input {
-        width: 31.75rem;
-        height: 3.125rem;
+        width: 100%;
         padding: 0.875rem 1rem;
         border-radius: 0.9375rem;
         border: 1px solid rgba(252, 249, 249, 0.1);
-        gap: 0.5rem;
-        margin-bottom: 20px;
         background-color: transparent ;
-        color: rgba(252, 249, 249, 1);
-        margin-left: 50px;
-
-        @media (min-width: 769px) {
-            margin-left: 50px;
-        }
-
-            @media (max-width: 768px) {
-            margin-left: 32px;
-        }
-
-        @media (max-width: 375px) {
-            width: 20.9375rem;
-            height: 2.9375rem;
-            margin-right: 20px;
-            margin-left: 20px;
-        }
+        color: var(--base-white);
 
         &::placeholder {
             color: rgba(252, 249, 249, 0.5);
         }
     }
 
-    textarea {
-        color: rgba(252, 249, 249, 1);
-        resize: none;
-      }
-
     &__comments {
-        width: 31.75rem;
-        height: 12.25rem;
+        width: 100%;
+        min-height: 12.25rem;
         padding: 0.875rem 1rem;
         border-radius: 0.5rem;
         border: 1px solid rgba(252, 249, 249, 0.1);
-        gap: 0.5rem;
         background-color: transparent;
-        margin-bottom: 2.5rem;
-
-        @media (min-width: 769px) {
-            margin-left: 50px;
-        }
-
-            @media (max-width: 768px) {
-            margin-left: 32px;
-        }
-
-        @media (max-width: 375px) {
-            width: 20.9375rem;
-            height: 12.25rem;
-            padding: 0.875rem 1rem;
-            border-radius: 0.5rem;
-            border: 1px solid;
-            gap: 0.5rem;
-            margin-left: 1.25rem;
-            margin-right: 1.25rem;
-        }
+        color: var(--base-white);
+        resize: none;
     }
 
-
-
-    &_actions {
-        .button {
-          --border-width: 1px;
-          --border-color: rgba(252, 249, 249, 0.10);
-
-          display: inline-flex;
-          align-items: center;
-          padding-block: calc(.875rem - var(--border-width));
-          padding-inline: 50px;
-          gap: .625rem;
-          color: var(--base-white, #FCF9F9);
-          font-size: 0.875rem;
-          font-weight: 600;
-          letter-spacing: -0.04em;
-          text-transform: uppercase;
-          border-radius: 15px;
-          border: var(--border-width) solid var(--border-color);
-          background: transparent;
-
-          @media (min-width: 769px) {
-            margin-left: 50px;
-          }
-
-          @media (max-width: 768px) {
-            margin-left: 32px;
-          }
-
-          @media (max-width: 375px) {
-            margin-left: 0;
-            margin: 0 auto;
-            display: block;
-          }
-        }
-
-        @include transition(border);
-
-        @include event {
-            --border-color: var(--base-yellow, #ECD979);
-        }
-
-        &__icon {
-            line-height: 0;
-
-            svg {
-                fill: var(--base-yellow);
-            }
-        }
+    &__actions {
+        display: flex;
+        justify-content: center;
 
         @include media {
-            padding-inline: 2.4375rem;
-            font-size: 1rem;
+            justify-content: flex-start;
         }
     }
 }
