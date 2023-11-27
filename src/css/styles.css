@@ -134,7 +134,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(180deg, var(--base-black) 79%, transparent 90%);
+  background: linear-gradient(180deg, var(--base-black) 91%, transparent 101%);
 }
 .header__content {
   display: flex;
