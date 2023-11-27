@@ -95,20 +95,19 @@
     position: absolute;
     flex-direction: column;
     justify-content: space-between;
-    top: 2.5rem;
+    top: 1.5rem;
     right: 1rem;
-    bottom: 0;
     bottom: 3.125rem;
   }
 
   @include media(1280) {
+    top: 5.5625rem;
     right: 6.5rem;
     bottom: 4.6875rem;
   }
 
   @include media(1440) {
-    top: 6rem;
-
+    top: 8.8125rem;
   }
 
   &__top {
