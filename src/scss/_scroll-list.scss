@@ -12,7 +12,7 @@
     }
 
     &::-webkit-scrollbar-track {
-        background-color: rgba(255, 255, 255, .35);
+        background-color: rgba(255, 255, 255, .1);
         border-radius: 0.25rem;
     }
 
@@ -27,7 +27,7 @@
         min-width: 100%;
 
         @include media {
-          min-width: calc((100% - 1.625rem * 2) / 2);
+          min-width: calc((100% - 1.625rem * 1) / 2);
         }
 
         @include media(1280) {

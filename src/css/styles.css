@@ -33,6 +33,20 @@ body {
 body.is-blocked {
   overflow: hidden;
 }
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 100%;
+}
+body::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--base-white);
+  border: 0.25rem;
+  background-clip: padding-box;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
 
 main {
   flex-grow: 1;
@@ -1015,7 +1029,7 @@ ul {
   height: 0.25rem;
 }
 .scroll-list::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.25rem;
 }
 .scroll-list::-webkit-scrollbar-thumb {
@@ -1029,7 +1043,7 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .scroll-list__item {
-    min-width: calc((100% - 3.25rem) / 2);
+    min-width: calc((100% - 1.625rem) / 2);
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1042,13 +1056,12 @@ ul {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 1.5rem 1.25rem 1.25rem;
   border-radius: 4px;
   border: 1px solid rgba(252, 249, 249, 0.1);
   align-items: center;
   gap: 0.5rem;
-  height: 100%;
+  height: calc(100% - 1.5rem);
 }
 .testimonials-card__picture {
   margin-top: -3rem;
@@ -1069,7 +1082,6 @@ ul {
   text-align: center;
 }
 .testimonials-card__caption {
-  width: 360px;
   color: rgba(252, 249, 249, 0.4);
   text-align: center;
 }/*# sourceMappingURL=styles.css.map */

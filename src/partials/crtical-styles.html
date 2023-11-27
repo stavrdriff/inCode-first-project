@@ -35,6 +35,23 @@
     overflow: hidden;
   }
 
+  body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 100%;
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--base-white);
+    border: 0.25rem;
+    background-clip: padding-box;
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+
   main {
     flex-grow: 1;
   }
@@ -190,7 +207,7 @@
   }
 
   .header__mobile-wrapper--decor-bottom-center {
-    background-image: image-set(url(./img/header-mobile-decor.webp) type("image/webp") 1x, url(./img/header-mobile-decor@2x.webp) type("image/webp") 2x, url(./img/header-mobile-decor.png) type("image/png") 1x, url(./img/header-mobile-decor@2x.png) type("image/png") 2x);
+    background-image: image-set(url(../img/header-mobile-decor.webp) type("image/webp") 1x, url(../img/header-mobile-decor@2x.webp) type("image/webp") 2x, url(../img/header-mobile-decor.png) type("image/png") 1x, url(../img/header-mobile-decor@2x.png) type("image/png") 2x);
     background-position: calc(0% - 27px) calc(100% + 51px);
     background-repeat: no-repeat;
     background-size: 340px 302px;
@@ -672,7 +689,7 @@
   }
 
   .section--decor-bottom-right {
-    background-image: image-set(url(./img/about-us-decor.webp) type("image/webp") 1x, url(./img/about-us-decor-2x.webp) type("image/webp") 2x, url(./img/about-us-decor.png) type("image/png") 1x, url(./img/about-us-decor-2x.png) type("image/png") 2x);
+    background-image: image-set(url(../img/about-us-decor.webp) type("image/webp") 1x, url(../img/about-us-decor-2x.webp) type("image/webp") 2x, url(../img/about-us-decor.png) type("image/png") 1x, url(../img/about-us-decor-2x.png) type("image/png") 2x);
     background-position: calc(100% + 209px) 100%;
     background-repeat: no-repeat;
     background-size: 459px 408px;
@@ -698,7 +715,7 @@
   }
 
   .section--decor-top-left {
-    background-image: image-set(url(./img/collection-decor.webp) type("image/webp") 1x, url(./img/collection-decor-2x.webp) type("image/webp") 2x, url(./img/collection-decor.png) type("image/png") 1x, url(./img/collection-decor-2x.png) type("image/png") 2x);
+    background-image: image-set(url(../img/collection-decor.webp) type("image/webp") 1x, url(../img/collection-decor-2x.webp) type("image/webp") 2x, url(../img/collection-decor.png) type("image/png") 1x, url(../img/collection-decor-2x.png) type("image/png") 2x);
     background-position: 0 316px;
     background-repeat: no-repeat;
     background-size: 72px 177px;
@@ -726,7 +743,7 @@
 
   @media screen and (min-width: 768px) {
     .section--decor-bottom-left {
-      background-image: image-set(url(./img/your-order-decor.webp) type("image/webp") 1x, url(./img/your-order-decor-2x.webp) type("image/webp") 2x, url(./img/your-order-decor.png) type("image/png") 1x, url(./img/your-order-decor-2x.png) type("image/png") 2x);
+      background-image: image-set(url(../img/your-order-decor.webp) type("image/webp") 1x, url(../img/your-order-decor-2x.webp) type("image/webp") 2x, url(../img/your-order-decor.png) type("image/png") 1x, url(../img/your-order-decor-2x.png) type("image/png") 2x);
       background-position: -222px 100%;
       background-repeat: no-repeat;
       background-size: 545px 484px;
