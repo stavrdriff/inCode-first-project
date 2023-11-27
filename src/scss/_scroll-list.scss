@@ -12,12 +12,26 @@
     }
 
     &::-webkit-scrollbar-track {
-        background-color: rgba(255, 255, 255, .35);  
+        background-color: rgba(255, 255, 255, .35); 
+        border-radius: 0.25rem; 
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: var(--base-white);
         border: 0.25rem;
         background-clip: padding-box;
+        border-radius: 0.25rem; 
+    }
+
+    &__item {
+        min-width: 100%;
+
+        @include media {
+          min-width: calc((100% - 1.625rem * 2) / 2);  
+        }
+        
+        @include media(1280) {
+           min-width: calc((100% - 1.625rem * 2) / 3); 
+        }
     }
 }
