@@ -1,25 +1,4 @@
 @import 'modern-normalize.min.css';
-@font-face {
-  font-weight: normal;
-  font-family: "manrope";
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/manrope/manrope-regular.woff2") format("woff2");
-}
-@font-face {
-  font-weight: 500;
-  font-family: "manrope";
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/manrope/manrope-medium.woff2") format("woff2");
-}
-@font-face {
-  font-weight: 600;
-  font-family: "manrope";
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/manrope/manrope-semibold.woff2") format("woff2");
-}
 :root {
   --base-black: #1C2225;
   --base-yellow: #ECD979;
@@ -115,19 +94,6 @@ ul {
   .container {
     --container-width: 90rem;
   }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .header {
@@ -269,6 +235,63 @@ ul {
 @media screen and (min-width: 1280px) {
   .header__actions {
     display: none;
+  }
+}
+
+.navigation {
+  --gap-navigation: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    --gap-navigation: 1.5625rem;
+  }
+}
+.navigation--grid .navigation__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) {
+  .navigation--grid .navigation__list {
+    display: flex;
+  }
+}
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-navigation);
+  align-items: flex-end;
+}
+@media screen and (min-width: 1280px) {
+  .navigation__list {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.navigation__item {
+  color: var(--base-white, #FCF9F9);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__item:focus, .navigation__item:hover {
+  color: var(--base-yellow);
+}
+.navigation__link {
+  font-size: 14px;
+  line-height: 1.28;
+  text-transform: uppercase;
+  color: currentColor;
+}
+
+.footer .navigation__list {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer .navigation__item {
+  width: calc((100% - var(--gap-navigation)) / 2);
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  .footer .navigation__item {
+    width: unset;
   }
 }
 
@@ -631,6 +654,40 @@ ul {
   margin-bottom: 1.25rem;
 }
 
+@font-face {
+  font-weight: normal;
+  font-family: "manrope";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/manrope/manrope-regular.woff2") format("woff2");
+}
+@font-face {
+  font-weight: 500;
+  font-family: "manrope";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/manrope/manrope-medium.woff2") format("woff2");
+}
+@font-face {
+  font-weight: 600;
+  font-family: "manrope";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/manrope/manrope-semibold.woff2") format("woff2");
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .text-and-media {
   display: flex;
   flex-direction: column;
@@ -849,63 +906,6 @@ ul {
 @media screen and (min-width: 768px) {
   .form__actions {
     justify-content: flex-start;
-  }
-}
-
-.navigation {
-  --gap-navigation: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .navigation {
-    --gap-navigation: 1.5625rem;
-  }
-}
-.navigation--grid .navigation__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-@media screen and (min-width: 768px) {
-  .navigation--grid .navigation__list {
-    display: flex;
-  }
-}
-.navigation__list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-navigation);
-  align-items: flex-end;
-}
-@media screen and (min-width: 1280px) {
-  .navigation__list {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-.navigation__item {
-  color: var(--base-white, #FCF9F9);
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.navigation__item:focus, .navigation__item:hover {
-  color: var(--base-yellow);
-}
-.navigation__link {
-  font-size: 14px;
-  line-height: 1.28;
-  text-transform: uppercase;
-  color: currentColor;
-}
-
-.footer .navigation__list {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.footer .navigation__item {
-  width: calc((100% - var(--gap-navigation)) / 2);
-  font-size: 0.875rem;
-}
-@media screen and (min-width: 768px) {
-  .footer .navigation__item {
-    width: unset;
   }
 }
 

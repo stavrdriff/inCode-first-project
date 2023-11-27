@@ -1,21 +1,25 @@
+// critical styles start //
 @import 'modern-normalize.min.css';
 @import 'mixins';
-@import 'fonts';
 @import 'base';
 @import 'containers';
-@import 'helpers';
 @import 'header';
+@import 'navigation';
 @import 'socials';
 @import 'hero';
 @import 'button';
 @import 'section';
+
+// critical styles end //
+
+@import 'fonts';
+@import 'helpers';
 @import 'text-and-media';
 @import 'products';
 @import 'photo';
 @import 'your-order';
 @import 'form';
 @import 'testimonials';
-@import 'navigation';
 @import 'footer';
 @import 'scroll-list';
 @import 'testimonials-card';
