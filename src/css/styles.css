@@ -296,6 +296,132 @@ ul {
   fill: var(--base-white);
 }
 
+.hero {
+  position: relative;
+}
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .hero__wrapper {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__content {
+    gap: 2.5rem;
+    justify-content: center;
+  }
+}
+.hero__title {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  width: 335px;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+    width: 549px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    width: 519px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__title {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    width: 630px;
+  }
+}
+.hero__title-span {
+  color: var(--base-yellow, #ECD979);
+}
+.hero__action {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  transform: translateX(-6%);
+}
+@media screen and (min-width: 768px) {
+  .hero__action {
+    transform: translateX(-16%);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__action {
+    transform: translateX(-6%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__action {
+    transform: translateX(-13%);
+  }
+}
+
+.star {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .star {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .star {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .star {
+    padding-top: 6rem;
+    padding-bottom: 4.5rem;
+  }
+}
+.star__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.star__icon {
+  fill: var(--base-yellow, #ECD979);
+  text-align: center;
+  padding-bottom: 16px;
+}
+.star__text {
+  color: rgba(252, 249, 249, 0.4);
+  text-align: center;
+  letter-spacing: -0.04em;
+  width: 115px;
+}
+
 .button {
   --border-width: 1px;
   --border-color: rgba(252, 249, 249, 0.10);
@@ -378,6 +504,7 @@ ul {
 .section {
   position: relative;
   padding-block: 2.5rem;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .section {
