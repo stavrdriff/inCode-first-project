@@ -408,25 +408,25 @@ ul {
   .star {
     display: flex;
     position: absolute;
-    top: 0;
-    right: 0;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 2.5rem;
-    padding-bottom: 3rem;
+    top: 2.5rem;
+    right: 1rem;
+    padding-bottom: 5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .star {
     padding-top: 4rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 6.5rem;
+    right: 6.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .star {
     padding-top: 6rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 7rem;
   }
 }
 .star__top {
