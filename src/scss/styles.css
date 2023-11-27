@@ -113,6 +113,13 @@ ul {
   margin-block: 1.25rem;
 }
 
+<<<<<<< HEAD
+=======
+.burger-menu__close-btn svg {
+  fill: var(--base-white);
+}
+
+>>>>>>> Anastasia
 .socials {
   display: flex;
   gap: 0.75rem;
@@ -409,8 +416,11 @@ ul {
   .product__price {
     font-size: 1.125rem;
   }
+<<<<<<< HEAD
 }
 
 .scroll-list {
   display: flex;
+=======
+>>>>>>> Anastasia
 }/*# sourceMappingURL=styles.css.map */

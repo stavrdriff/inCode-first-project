@@ -1,4 +1,6 @@
 .header {
+  $this: &;
+
   padding-block: 1.25rem;
   position: sticky;
   top: 0;
@@ -17,12 +19,120 @@
   }
 
   &__mobile-wrapper {
-    display: none;
+    @include transition;
+    
+    transition-property: visibility, opacity;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    visibility: hidden;
+    opacity: 0;
+    width: 17.125rem;
+    height: 100vh;
+    background-color: var(--base-yellow);
+    justify-content: flex-end;
+    padding: 1.25rem;
+
+
+    @include media {
+      padding: 1.25rem 2rem;
+      width: 23.75rem;
+    } 
 
     @include media(1280) {
-      display: flex;
+      padding: 0;
+    }
+
+    
+
+    &.is-open {
+      visibility: visible;
+      opacity: 1;
+      
+      .navigation__item {
+        color: var(--base-black);
+      
+        @include media(1280) {
+          color: unset;
+        }
+      }
+
+      #{$this} {
+        &__navigation {
+          margin: auto 0 auto auto;
+        }
+
+      }
+    }
+
+    @include media(1280) {
+      position: static;
       justify-content: space-between;
       flex-grow: 1;
+      flex-direction: row;
+      visibility: visible;
+      opacity: 1;
+      width: unset;
+      height: unset;
+      background-color: unset;
+      background-image: none;
+    }
+
+    &--decor-bottom-center {
+      background-image: image-set(url(../img/header-mobile-decor.webp) type("image/webp") 1x,
+          url(../img/header-mobile-decor@2x.webp) type("image/webp") 2x,
+          url(../img/header-mobile-decor.png) type("image/png") 1x,
+          url(../img/header-mobile-decor@2x.png) type("image/png") 2x);
+      background-position: calc(0% - 27px) calc(100% + 51px);
+      background-repeat: no-repeat;
+      background-size: 340px 302px;
+
+      @include media {
+        background-position: calc(0% - 73px) calc(100% + 120px);
+        background-size: 544px 484px;
+      }
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    @include media {
+      width: 44px;
+      height: 44px;
+    }
+
+    @include media(1280) {
+      display: none;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 65%;
+      height: 2px;
+      display: block;
+      background-color: var(--base-black);
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-radius: 2px;
+
+      &:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      @include media {
+        height: 3px;
+      }
     }
   }
 
