@@ -17,7 +17,7 @@
   font-family: "manrope";
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/manrope/manrope-semmibold.woff2") format("woff2");
+  src: url("../fonts/manrope/manrope-semibold.woff2") format("woff2");
 }
 :root {
   --base-black: #1C2225;
