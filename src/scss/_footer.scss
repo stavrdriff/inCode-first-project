@@ -2,73 +2,73 @@
   border-top: 1px solid rgba(252, 249, 249, 0.10);
 
   .container {
-      background-image: image-set(
-          url(../img/footer-decor.webp) type("image/webp") 1x,
-          url(../img/footer-decor-2x.webp) type("image/webp") 2x,
-          url(../img/footer-decor.png) type("image/png") 1x,
-          url(../img/footer-decor-2x.png) type("image/png") 2x
-      );
-      background-position: -38px calc(100% + 189px);
-      background-repeat: no-repeat;
-      background-size: 451px 401px;
+    background-image: image-set(
+      url(../img/footer-decor.webp) type("image/webp") 1x,
+      url(../img/footer-decor-2x.webp) type("image/webp") 2x,
+      url(../img/footer-decor.png) type("image/png") 1x,
+      url(../img/footer-decor-2x.png) type("image/png") 2x
+    );
+    background-position: -38px calc(100% + 189px);
+    background-repeat: no-repeat;
+    background-size: 451px 401px;
 
-      @include media {
-          background-position: calc(100% + 278px) -14px;
-      }
+    @include media {
+      background-position: calc(100% + 278px) -14px;
+    }
 
-      @include media(1280) {
-          background-position:  calc(100% + 259px) -61px;
-          background-size: 594px 528px;
-      }
+    @include media(1280) {
+      background-position:  calc(100% + 259px) -61px;
+      background-size: 594px 528px;
+    }
 
-      @include media(1440) {
-          background-position: calc(100% + 99px) -61px;
-      }
+    @include media(1440) {
+      background-position: calc(100% + 99px) -61px;
+    }
   }
 
   &__content {
-      gap: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      padding-top: 2.5rem;
-      padding-bottom: 19.25rem;
+    gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5rem;
+    padding-bottom: 19.25rem;
 
-      @include media {
-          gap: 5rem;
-          padding-right: 12.125rem;
-          padding-bottom: 2.5rem;
-      }
+    @include media {
+      gap: 5rem;
+      padding-right: 12.125rem;
+      padding-bottom: 2.5rem;
+    }
 
-      @include media(1280) {
-          gap: 7.3125rem;
-          padding-right: 20.375rem;
-      }
+    @include media(1280) {
+      gap: 7.3125rem;
+      padding-right: 20.375rem;
+    }
 
-      @include media(1440) {
-          padding-right: 30.375rem;
-      }
+    @include media(1440) {
+      padding-right: 30.375rem;
+    }
   }
 
   &__text{
+    color: #FCF9F9;
+    font-size: 2.75rem;
+    line-height: 1.22;
+    letter-spacing: -0.03em;
+
+    @include media {
       color: #FCF9F9;
-      font-size: 2.75rem;
-      line-height: 1.22;
-      letter-spacing: -0.03em;
+      font-size: 3.375rem;
+      line-height: 1.18;
+    }
 
-      @include media {
-          color: #FCF9F9;
-          font-size: 3.375rem;
-          line-height: 1.18;
-      }
-
-      @include media(1280) {
-          color: #FCF9F9;
-          font-size: 4rem;
-          line-height: 1.15;
-      }
+    @include media(1280) {
+      color: #FCF9F9;
+      font-size: 4rem;
+      line-height: 1.15;
+    }
   }
 
   &__text-span{
-      color: #ECD979;
+    color: #ECD979;
   }
 }
