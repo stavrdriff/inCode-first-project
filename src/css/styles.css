@@ -419,25 +419,23 @@ ul {
   .star {
     display: flex;
     position: absolute;
-    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     top: 2.5rem;
     right: 1rem;
-    padding-bottom: 5rem;
+    bottom: 0;
+    bottom: 3.125rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .star {
-    padding-top: 4rem;
-    padding-bottom: 6.5rem;
     right: 6.5rem;
+    bottom: 4.6875rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .star {
-    padding-top: 6rem;
-    padding-bottom: 7rem;
+    top: 6rem;
   }
 }
 .star__top {
@@ -455,6 +453,16 @@ ul {
   text-align: center;
   letter-spacing: -0.04em;
   max-width: 115px;
+}
+.star__picture {
+  max-width: 8.6875rem;
+  aspect-ratio: 139/98;
+}
+.star__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .button {
