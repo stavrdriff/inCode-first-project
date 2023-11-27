@@ -36,13 +36,24 @@
   }
 
   &--phone {
-    padding-inline: calc(1.75rem - var(--border-width));
+    padding-inline: calc(1.25rem - var(--border-width));
+    padding-block: calc(0.75rem - var(--border-width));
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.42;
     letter-spacing: unset;
+    color: var(--base-black);
+    border: 1px solid rgba(28, 34, 37, 0.10);
 
     @include media {
+      padding-inline: calc(1.75rem - var(--border-width));
+      padding-block: calc(0.875rem - var(--border-width));
       font-size: 0.875rem;
+    }
+
+    @include media(1280) {
+      border: var(--border-width) solid var(--border-color);
+      color: var(--base-white);
     }
   }
 }

@@ -1,7 +1,12 @@
 .navigation {
   $this: &;
 
-  --gap-navigation: 1.5625rem;
+  --gap-navigation: 1.25rem;
+
+  @include media {
+    --gap-navigation: 1.5625rem;
+  }
+  
 
   &--grid {
     #{$this} {
@@ -18,7 +23,7 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: var(--gap-navigation);
     align-items: flex-end;
 
@@ -29,25 +34,29 @@
   }
 
   &__item {
-
+    color: var(--base-white, #FCF9F9);
+      
+    @include transition(color);
+        
+    @include event {
+      color: var(--base-yellow);
+    }
   }
 
   &__link {
     font-size: 14px;
     line-height: 1.28;
     text-transform: uppercase;
-    color: var(--base-white, #FCF9F9);
-
-    @include transition(color);
-
-    @include event {
-      color: var(--base-yellow);
-    }
+    color: currentColor;
   }
 }
 
 .footer {
   .navigation {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
     &__item {
       width: calc((100% - var(--gap-navigation)) / 2);
       font-size: 0.875rem;
