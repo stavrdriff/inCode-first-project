@@ -1,132 +1,121 @@
 .hero {
-    position: relative;
+  position: relative;
 
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 
-        @include media(1280) {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
+    @include media(1280) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
     }
-    
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-        // min-width: 39.5rem;
+  }
 
-        @include media {
-            gap: 2.5rem;
-            justify-content: center;
-        }
-
-
-    }
-    &__title {
-        font-size: 44px;
-        font-weight: 400;
-        line-height: 1.22;
-        // letter-spacing / font-size
-        letter-spacing: -0.03em;
-        width: 335px;
-
-        @include media {
-            font-size: 54px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 1.18;           
-            letter-spacing: -0.03em;
-            width: 549px;
-        }
-
-        @include media(1280) {
-            width: 519px;
-        }
-        @include media(1440) {
-            font-size: 64px;
-            font-weight: 400;
-            line-height: 1.15;
-            letter-spacing: -0.03em;
-            width: 630px;
-        }
-    }
-
-    &__title-span {
-        color: var(--base-yellow, #ECD979);
-    }
-
-    &__action {
-        display: flex;         
-        justify-content: center;
-        margin-bottom: 40px;
-        transform: translateX(-6%);
-
-        @include media {
-            transform: translateX(-16%);
-        }
-
-        @include media(1280) {
-            transform: translateX(-6%);
-        }
-
-        @include media(1440) {
-            transform: translateX(-13%);
-        }
-    }
-    
-    
-
-}
-
-.star{
-    display: none;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 
     @include media {
-        display: flex;
-        position: absolute;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-between;
-        // padding-top: 2.5rem;
-        // padding-bottom: 3rem;
-        top: 2.5rem;
-        right: 1rem;
-        padding-bottom: 5rem;
+      gap: 2.5rem;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-size: 2.75rem;
+    font-weight: 400;
+    line-height: 1.22;
+    letter-spacing: -0.03em;
+    max-width: 335px;
+
+    @include media {
+      font-size: 3.375rem;
+      line-height: 1.18;
+      max-width: 549px;
     }
 
     @include media(1280) {
-        padding-top: 4rem;
-        padding-bottom: 6.5rem;
-        right: 6.5rem;
-    } 
+      max-width: 519px;
+    }
+    @include media(1440) {
+      font-size: 4rem;
+      line-height: 1.15;
+      max-width: 630px;
+    }
+  }
+
+  &__title-span {
+    color: var(--base-yellow, #ECD979);
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    transform: translateX(-6%);
+
+    @include media {
+      transform: translateX(-16%);
+    }
+
+    @include media(1280) {
+      transform: translateX(-6%);
+    }
 
     @include media(1440) {
-        padding-top: 6rem;
-        padding-bottom: 7rem;
+      transform: translateX(-13%);
     }
+  }
 
-    &__top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  &__picture {
+    border-radius: .25rem;
+    overflow: hidden;
+  }
+}
 
-    }
+.star {
+  display: none;
 
-    &__icon {
-        fill: var(--base-yellow, #ECD979);
-        text-align: center;
-        padding-bottom: 16px;
-    }
+  @include media {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 2.5rem;
+    right: 1rem;
+    padding-bottom: 5rem;
+  }
 
-    &__text {
-        color: rgba(252, 249, 249, 0.40);
-        text-align: center;
-        letter-spacing: -0.04em;
-        width: 115px;
-    }
+  @include media(1280) {
+    padding-top: 4rem;
+    padding-bottom: 6.5rem;
+    right: 6.5rem;
+  }
 
-    
+  @include media(1440) {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: var(--base-yellow, #ECD979);
+    text-align: center;
+    padding-bottom: 16px;
+  }
+
+  &__text {
+    color: rgba(252, 249, 249, 0.40);
+    text-align: center;
+    letter-spacing: -0.04em;
+    max-width: 115px;
+  }
 }
