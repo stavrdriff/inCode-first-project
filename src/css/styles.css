@@ -708,7 +708,7 @@ ul {
   font-display: swap;
   src: url("../fonts/manrope/manrope-semibold.woff2") format("woff2");
 }
-.visually-hidden {
+.visually-hidden, .section--title-hidden .section__title, .section--title-hidden .text-and-media__title {
   position: absolute;
   width: 1px;
   height: 1px;

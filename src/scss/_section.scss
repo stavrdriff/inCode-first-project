@@ -38,6 +38,14 @@
     }
   }
 
+  &--title-hidden {
+    #{$this} {
+      &__title {
+        @extend .visually-hidden;
+      }
+    }
+  }
+
   &--decor-bottom-right {
     background-image: image-set(
       url(../img/about-us-decor.webp) type("image/webp") 1x,
@@ -90,8 +98,8 @@
   }
 
     &--decor-bottom-left {
-      
-  
+
+
       @include media {
         background-image: image-set(
           url(../img/your-order-decor.webp) type("image/webp") 1x,
@@ -103,11 +111,11 @@
         background-repeat: no-repeat;
         background-size: 545px 484px;
       }
-  
+
       @include media(1280) {
         background-position: -256px 100%;
       }
-  
+
       @include media(1440) {
         background-position: -220px 100%;
       }
