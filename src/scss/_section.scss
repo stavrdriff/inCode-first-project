@@ -122,8 +122,8 @@
   &--photo {
     #{$this} {
       &__background {
+        margin: 0 auto 5rem;
         max-width: 23.4375rem;
-        margin: 0 auto;
         aspect-ratio: 375/550;
         background-image: image-set(
           url(../img/baba-mobile.webp) type("image/webp") 1x,
@@ -136,6 +136,7 @@
         background-size: 100% 100%;
 
         @include media {
+          margin-bottom: 6.25rem;
           max-width: 48rem;
           aspect-ratio: 768/776;
           background-image: image-set(
@@ -147,6 +148,7 @@
         }
 
         @include media(1280) {
+          margin-bottom: 9.375rem;
           max-width: 80rem;
           aspect-ratio: 1280/776;
           background-image: image-set(
