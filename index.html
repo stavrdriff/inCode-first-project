@@ -784,8 +784,8 @@
   }
 
   .section--photo .section__background {
+    margin: 0 auto 5rem;
     max-width: 23.4375rem;
-    margin: 0 auto;
     aspect-ratio: 375/550;
     background-image: image-set(url(../img/baba-mobile.webp) type("image/webp") 1x, url(../img/baba-mobile-2x.webp) type("image/webp") 2x, url(../img/baba-mobile.jpg) type("image/png") 1x, url(../img/baba-mobile-2x.jpg) type("image/png") 2x);
     background-position: 0 0;
@@ -795,6 +795,7 @@
 
   @media screen and (min-width: 768px) {
     .section--photo .section__background {
+      margin-bottom: 6.25rem;
       max-width: 48rem;
       aspect-ratio: 768/776;
       background-image: image-set(url(../img/baba-tablet.webp) type("image/webp") 1x, url(../img/baba-tablet-2x.webp) type("image/webp") 2x, url(../img/baba-tablet.jpg) type("image/png") 1x, url(../img/baba-tablet-2x.jpg) type("image/png") 2x);
@@ -803,6 +804,7 @@
 
   @media screen and (min-width: 1280px) {
     .section--photo .section__background {
+      margin-bottom: 9.375rem;
       max-width: 80rem;
       aspect-ratio: 1280/776;
       background-image: image-set(url(../img/baba-medium.webp) type("image/webp") 1x, url(../img/baba-medium-2x.webp) type("image/webp") 2x, url(../img/baba-medium.jpg) type("image/png") 1x, url(../img/baba-medium-2x.jpg) type("image/png") 2x);
@@ -864,7 +866,7 @@
   <link rel="preload" href="/inCode-first-project/assets/manrope-semibold-e2bf656e.woff2" as="font" type="font/woff2" crossorigin>
   
   <script type="module" crossorigin src="/inCode-first-project/commonHelpers.js"></script>
-  <link rel="stylesheet" href="/inCode-first-project/assets/index-e2101510.css">
+  <link rel="stylesheet" href="/inCode-first-project/assets/index-cca367fd.css">
 </head>
 
 <body>
@@ -1143,11 +1145,8 @@
   </div>
 </section>
 
-  <section class="section section--title-hidden section--photo">
-  <h2 class="section__title">Photo</h2>
+  <section id="order" class="section section--decor-bottom-left section--photo">
   <div class="section__background"></div>
-</section>
-  <section id="order" class="section section--decor-bottom-left">
   <div class="container">
     <div class="text-and-media text-and-media--media-left">
       <div class="text-and-media__content">
