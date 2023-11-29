@@ -783,6 +783,40 @@
     }
   }
 
+  .section--photo .section__background {
+    max-width: 23.4375rem;
+    margin: 0 auto;
+    aspect-ratio: 375/550;
+    background-image: image-set(url(../img/baba-mobile.webp) type("image/webp") 1x, url(../img/baba-mobile-2x.webp) type("image/webp") 2x, url(../img/baba-mobile.jpg) type("image/png") 1x, url(../img/baba-mobile-2x.jpg) type("image/png") 2x);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section--photo .section__background {
+      max-width: 48rem;
+      aspect-ratio: 768/776;
+      background-image: image-set(url(../img/baba-tablet.webp) type("image/webp") 1x, url(../img/baba-tablet-2x.webp) type("image/webp") 2x, url(../img/baba-tablet.jpg) type("image/png") 1x, url(../img/baba-tablet-2x.jpg) type("image/png") 2x);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .section--photo .section__background {
+      max-width: 80rem;
+      aspect-ratio: 1280/776;
+      background-image: image-set(url(../img/baba-medium.webp) type("image/webp") 1x, url(../img/baba-medium-2x.webp) type("image/webp") 2x, url(../img/baba-medium.jpg) type("image/png") 1x, url(../img/baba-medium-2x.jpg) type("image/png") 2x);
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .section--photo .section__background {
+      max-width: 90rem;
+      aspect-ratio: 1440/776;
+      background-image: image-set(url(../img/baba-desktop.webp) type("image/webp") 1x, url(../img/baba-desktop-2x.webp) type("image/webp") 2x, url(../img/baba-desktop.jpg) type("image/png") 1x, url(../img/baba-desktop-2x.jpg) type("image/png") 2x);
+    }
+  }
+
   .section__title,
   .text-and-media__title {
     margin-bottom: 2.5rem;
@@ -830,7 +864,7 @@
   <link rel="preload" href="/inCode-first-project/assets/manrope-semibold-e2bf656e.woff2" as="font" type="font/woff2" crossorigin>
   
   <script type="module" crossorigin src="/inCode-first-project/commonHelpers.js"></script>
-  <link rel="stylesheet" href="/inCode-first-project/assets/index-db62f4cb.css">
+  <link rel="stylesheet" href="/inCode-first-project/assets/index-e2101510.css">
 </head>
 
 <body>
@@ -1109,21 +1143,9 @@
   </div>
 </section>
 
-  <section class="section section--title-hidden">
+  <section class="section section--title-hidden section--photo">
   <h2 class="section__title">Photo</h2>
-  <picture class="photo">
-    <source media="(min-width: 1440px)" srcset="/inCode-first-project/assets/baba-desktop-a1b09ffa.webp , /inCode-first-project/assets/baba-desktop-2x-4e8dd098.webp 2x"
-      type="image/webp">
-    <source media="(min-width: 1280px)" srcset="/inCode-first-project/assets/baba-medium-2e4977ff.webp , /inCode-first-project/assets/baba-medium-2x-e7945b47.webp 2x" type="image/webp">
-    <source media="(min-width: 768px)" srcset="/inCode-first-project/assets/baba-tablet-c5e478c3.webp , /inCode-first-project/assets/baba-tablet-2x-3ee9aa43.webp 2x" type="image/webp">
-    <source media="(min-width: 375px)" srcset="/inCode-first-project/assets/baba-mobile-7a9abbdd.webp , /inCode-first-project/assets/baba-mobile-2x-0bbce982.webp 2x" type="image/webp">
-    <source media="(min-width: 1440px)" srcset="/inCode-first-project/assets/baba-desktop-3f6b18ee.jpg , /inCode-first-project/assets/baba-desktop-2x-8c723c49.jpg 2x" type="image/jpg">
-    <source media="(min-width: 1280px)" srcset="/inCode-first-project/assets/baba-medium-8b880718.jpg , /inCode-first-project/assets/baba-medium-2x-966cd879.jpg 2x" type="image/jpg">
-    <source media="(min-width: 768px)" srcset="/inCode-first-project/assets/baba-tablet-f502d9d6.jpg , /inCode-first-project/assets/baba-tablet-2x-edce8cc2.jpg 2x" type="image/jpg">
-    <source media="(min-width: 375px)" srcset="/inCode-first-project/assets/baba-mobile-c5d3b9e7.jpg , /inCode-first-project/assets/baba-mobile-2x-134e3025.jpg 2x" type="image/jpg">
-    <img class="photo__image" src="/inCode-first-project/assets/baba-mobile-c5d3b9e7.jpg" alt="photo vyshyvanka" width="1440" height="776"
-      loading="lazy">
-  </picture>
+  <div class="section__background"></div>
 </section>
   <section id="order" class="section section--decor-bottom-left">
   <div class="container">
