@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     triggerArr.forEach((trigger) => {
-      trigger.addEventListener('click', () => {
+      trigger.addEventListener('click', (event) => {
         mobileMenu.classList.toggle(selectors.openSelector);
         body.classList.toggle(selectors.bodyBlocked);
 
@@ -104,7 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-// ==================== smooth scroll start =========================== //
+  const clickOutsideMenu = () => {
+    window.addEventListener('click', (event) => {
+      const { target } = event;
+      const openedMenu = document.querySelector(`.${selectors.mobileMenu}.${selectors.openSelector}`);
+
+      if (!openedMenu) { return; }
+
+      const closeButton = openedMenu.querySelector(selectors.mobileMenuTrigger);
+      const clickOutsideMenu = !target.closest(`.${selectors.mobileMenu}`)
+      const notTrigger = !target.closest('.burger');
+
+      if (clickOutsideMenu && notTrigger) {
+        closeButton.click();
+      }
+    });
+  }
+
+  // ==================== smooth scroll start =========================== //
 
   const scrollToTarget = (target) => {
     const targetElement = document.getElementById(target);
@@ -117,6 +134,20 @@ document.addEventListener('DOMContentLoaded', () => {
       top: targetElement.offsetTop,
     });
   };
+
+  const closeMenu = (link) => {
+
+    if (!link) { return; }
+
+    const menu = document.querySelector(`.${selectors.mobileMenu}`);
+    const isOpened = menu.classList.contains(selectors.openSelector);
+
+    if (isOpened) {
+      const closeButton = menu.querySelector(selectors.mobileMenuTrigger);
+
+      closeButton.click();
+    }
+  }
 
   const initScrollAnchors = () => {
     const links = [...document.querySelectorAll('[href*="#"]')];
@@ -133,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
         scrollToTarget(target);
+        closeMenu(link);
       });
     });
   };
@@ -143,4 +175,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnchors();
   initMobileMenu();
   initModalTriggers();
+  clickOutsideMenu();
 });

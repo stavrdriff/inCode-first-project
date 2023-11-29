@@ -20,7 +20,7 @@
 
   &__mobile-wrapper {
     @include transition;
-    
+
     transition-property: visibility, opacity;
     position: fixed;
     top: 0;
@@ -39,21 +39,21 @@
     @include media {
       padding: 1.25rem 2rem;
       width: 23.75rem;
-    } 
+    }
 
     @include media(1280) {
       padding: 0;
     }
 
-    
+
 
     &.is-open {
       visibility: visible;
       opacity: 1;
-      
+
       .navigation__item {
         color: var(--base-black);
-      
+
         @include media(1280) {
           color: unset;
         }
@@ -61,10 +61,24 @@
 
       #{$this} {
         &__navigation {
-          margin: auto 0 auto auto;
+          // margin: auto 0 auto auto;
         }
 
       }
+    }
+
+    background-image: image-set(
+      url(../img/header-mobile-decor.webp) type("image/webp") 1x,
+      url(../img/header-mobile-decor@2x.webp) type("image/webp") 2x,
+      url(../img/header-mobile-decor.png) type("image/png") 1x,
+      url(../img/header-mobile-decor@2x.png) type("image/png") 2x);
+    background-position: calc(0% - 27px) calc(100% + 51px);
+    background-repeat: no-repeat;
+    background-size: 340px 302px;
+
+    @include media {
+      background-position: calc(0% - 73px) calc(100% + 120px);
+      background-size: 544px 484px;
     }
 
     @include media(1280) {
@@ -78,21 +92,6 @@
       height: unset;
       background-color: unset;
       background-image: none;
-    }
-
-    &--decor-bottom-center {
-      background-image: image-set(url(../img/header-mobile-decor.webp) type("image/webp") 1x,
-          url(../img/header-mobile-decor@2x.webp) type("image/webp") 2x,
-          url(../img/header-mobile-decor.png) type("image/png") 1x,
-          url(../img/header-mobile-decor@2x.png) type("image/png") 2x);
-      background-position: calc(0% - 27px) calc(100% + 51px);
-      background-repeat: no-repeat;
-      background-size: 340px 302px;
-
-      @include media {
-        background-position: calc(0% - 73px) calc(100% + 120px);
-        background-size: 544px 484px;
-      }
     }
   }
 
@@ -139,6 +138,12 @@
   &__navigation {
     display: flex;
     align-items: center;
+    margin: auto 0 auto auto;
+
+    @include media(1280) {
+      margin: unset;
+    }
+
   }
 
   &__socials {
